@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark Mode Toggle */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .toggle-label {
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+  }
+  
+  #darkModeToggle:checked + .toggle-label {
+    background-color: #00ffff;
+  }
+  
+  #darkModeToggle:checked + .toggle-label::before {
+    transform: translateX(25px);
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode {
+    background-color: #f0f0f0;
+    color: #0a0a0a;
+  }
+  
+  body.light-mode .card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #0a0a0a;
+  }
+  
+  body.light-mode .hire-me {
+    background-color: #00b3b3;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .highlight {
+    color: #00ffff;
+  }
+  
+  .animated-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Glassmorphism Card */
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  
+  /* Hire Me Button */
+  .hire-me {
+    display: block;
+    margin: 50px auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hire-me:hover {
+    background-color: #00b3b3;
+    transform: scale(1.1);
+  }
